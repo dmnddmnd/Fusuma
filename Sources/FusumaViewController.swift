@@ -61,7 +61,7 @@ public final class FusumaViewController: UIViewController {
     public var hasVideo = false
 
     var mode: Mode = Mode.Camera
-    public var modeOrder: FusumaModeOrder = .LibraryFirst
+    public var modeOrder: FusumaModeOrder = .CameraFirst
     var willFilter = true
 
     @IBOutlet weak var photoLibraryViewerContainer: UIView!
