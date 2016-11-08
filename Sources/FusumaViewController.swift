@@ -60,7 +60,7 @@ public final class FusumaViewController: UIViewController {
 
     public var hasVideo = false
 
-    var mode: Mode = Mode.Camera
+    var mode: Mode = Mode.Library
     public var modeOrder: FusumaModeOrder = .CameraFirst
     var willFilter = true
 
@@ -174,7 +174,7 @@ public final class FusumaViewController: UIViewController {
         libraryButton.clipsToBounds = true
         videoButton.clipsToBounds = true
 
-        changeMode(Mode.Library)
+        changeMode(Mode.Camera)
         
         photoLibraryViewerContainer.addSubview(albumView)
         cameraShotContainer.addSubview(cameraView)
@@ -182,10 +182,10 @@ public final class FusumaViewController: UIViewController {
         
 		titleLabel.textColor = fusumaBaseTintColor
 		
-       if modeOrder != .LibraryFirst {
-           libraryFirstConstraints.forEach { $0.priority = 250 }
-           cameraFirstConstraints.forEach { $0.priority = 1000 }
-       }
+//       if modeOrder != .LibraryFirst {
+//           libraryFirstConstraints.forEach { $0.priority = 250 }
+//           cameraFirstConstraints.forEach { $0.priority = 1000 }
+//       }
         
         if !hasVideo {
             
@@ -195,7 +195,7 @@ public final class FusumaViewController: UIViewController {
                 item:       self.view,
                 attribute:  .Trailing,
                 relatedBy:  .Equal,
-                toItem:     cameraButton,
+                toItem:     libraryButton,
                 attribute:  .Trailing,
                 multiplier: 1.0,
                 constant:   0
@@ -222,14 +222,14 @@ public final class FusumaViewController: UIViewController {
     override public func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        albumView.frame  = CGRect(origin: CGPointZero, size: photoLibraryViewerContainer.frame.size)
-        albumView.layoutIfNeeded()
         cameraView.frame = CGRect(origin: CGPointZero, size: cameraShotContainer.frame.size)
         cameraView.layoutIfNeeded()
-
         
-        albumView.initialize()
+        albumView.frame  = CGRect(origin: CGPointZero, size: photoLibraryViewerContainer.frame.size)
+        albumView.layoutIfNeeded()
+
         cameraView.initialize()
+        albumView.initialize()
         
         if hasVideo {
 
