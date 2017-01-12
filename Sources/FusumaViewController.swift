@@ -115,10 +115,11 @@ public final class FusumaViewController: UIViewController {
         
         // Get the custom button images if they're set
         
-        
         cameraButton.clipsToBounds  = true
         libraryButton.clipsToBounds = true
         videoButton.clipsToBounds = true
+        
+        cameraButton.selected = true
 
         changeMode(Mode.Camera)
         
@@ -203,11 +204,14 @@ public final class FusumaViewController: UIViewController {
     }
     
     @IBAction func libraryButtonPressed(sender: UIButton) {
-        
+        self.cameraButton.selected = false
+        sender.selected = true
         changeMode(Mode.Library)
     }
     
     @IBAction func photoButtonPressed(sender: UIButton) {
+        self.libraryButton.selected = false
+        sender.selected = true
     
         changeMode(Mode.Camera)
     }
@@ -330,7 +334,6 @@ private extension FusumaViewController {
         
         self.mode = mode
         
-        dishighlightButtons()
         
         switch mode {
         case .Library:

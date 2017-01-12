@@ -45,7 +45,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dx0-Tt-oZs">
-                            <rect key="frame" x="8" y="15" width="38" height="27"/>
+                            <rect key="frame" x="8" y="18" width="38" height="27"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="38" id="PQP-9C-4h0"/>
                                 <constraint firstAttribute="height" constant="27" id="Ygl-n3-Z0d"/>
@@ -59,7 +59,7 @@
                             </connections>
                         </button>
                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iB-Jh-kTh">
-                            <rect key="frame" x="552" y="17" width="38" height="27"/>
+                            <rect key="frame" x="552" y="19" width="38" height="27"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="27" id="4aS-BG-rpd"/>
                                 <constraint firstAttribute="width" constant="38" id="NE8-9R-uXl"/>
@@ -74,7 +74,7 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CAMERA ROLL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxN-Q8-Lgd">
-                            <rect key="frame" x="56" y="11" width="488" height="34"/>
+                            <rect key="frame" x="56" y="18" width="488" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="34" id="JDW-4S-H17"/>
                             </constraints>
@@ -90,9 +90,9 @@
                         <constraint firstAttribute="trailing" secondItem="5iB-Jh-kTh" secondAttribute="trailing" constant="10" id="CsQ-ni-3OY"/>
                         <constraint firstItem="cxN-Q8-Lgd" firstAttribute="leading" secondItem="Dx0-Tt-oZs" secondAttribute="trailing" constant="10" id="INH-fO-tBz"/>
                         <constraint firstItem="5iB-Jh-kTh" firstAttribute="leading" secondItem="cxN-Q8-Lgd" secondAttribute="trailing" constant="8" id="InH-Sz-8gz"/>
-                        <constraint firstItem="5iB-Jh-kTh" firstAttribute="top" secondItem="8ba-kc-jlJ" secondAttribute="top" constant="17" id="dqA-0U-VSM"/>
-                        <constraint firstItem="cxN-Q8-Lgd" firstAttribute="centerY" secondItem="8ba-kc-jlJ" secondAttribute="centerY" constant="3" id="lmi-EB-0zz"/>
-                        <constraint firstItem="Dx0-Tt-oZs" firstAttribute="top" secondItem="8ba-kc-jlJ" secondAttribute="top" constant="15" id="phx-7N-5Ks"/>
+                        <constraint firstItem="5iB-Jh-kTh" firstAttribute="top" secondItem="8ba-kc-jlJ" secondAttribute="top" constant="19" id="dqA-0U-VSM"/>
+                        <constraint firstItem="cxN-Q8-Lgd" firstAttribute="centerY" secondItem="8ba-kc-jlJ" secondAttribute="centerY" constant="10" id="lmi-EB-0zz"/>
+                        <constraint firstItem="Dx0-Tt-oZs" firstAttribute="top" secondItem="8ba-kc-jlJ" secondAttribute="top" constant="18" id="phx-7N-5Ks"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cph-QM-jcJ">
@@ -132,9 +132,7 @@
                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
                     <inset key="imageEdgeInsets" minX="2" minY="3" maxX="2" maxY="2"/>
                     <state key="normal" title="Capture" backgroundImage="tab_bg"/>
-                    <state key="disabled" backgroundImage="tab_bg_pressed"/>
                     <state key="selected" backgroundImage="tab_bg_pressed"/>
-                    <state key="highlighted" backgroundImage="tab_bg_pressed"/>
                     <connections>
                         <action selector="photoButtonPressed:" destination="-1" eventType="touchUpInside" id="798-LR-edY"/>
                     </connections>
